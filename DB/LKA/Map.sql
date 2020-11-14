@@ -1,0 +1,35 @@
+USE LKA
+GO
+
+Select * from LKA.Map
+Select * from LKA.Stations
+
+
+--INSERT INTO LKA.Map (MapID, Distance, Price, Station1ID, Station2ID)
+--Values 
+--('CHE-PAB', 3, 3.80, 'CHECH', 'PAB'),
+--('PAB-LDZKAL', 15, 3.00, 'PAB', 'LDZ-KAL'),
+--('PAB-LDZLUB', 7, 2.40, 'PAB', 'LDZ-LUB'),
+--('LDZKAL-LDZLUB', 7, 2.20, 'LDZ-KAL', 'LDZ-LUB'),
+--('LDZZAB-LDZKAL', 4, 2.30, 'LDZ-ZAB', 'LDZ-KAL'),
+--('LDZPAB-LDZKAL', 4, 2.10, 'LDZ-PAB', 'LDZ-KAL'),
+--('RADZAH-LDZZAB', 5, 2.00, 'LDZ-RAD-ZAH', 'LDZ-ZAB'),
+--('RADZAH-ZGI', 4, 2.10, 'LDZ-RAD-ZAH', 'ZGI'),
+--('ZGI-JAR', 2, 2.20, 'ZGI-JAR', 'ZGI'),
+--('ZGIJAR-POL', 3, 2.80, 'ZGI-JAR', 'ZGI-POL'),
+--('ZGI-SMAR', 2, 2.10, 'SMAR', 'ZGI'),
+--('LDZPAB-CHJ', 2, 2.00, 'LDZ-PAB', 'LDZ-CHJ'),
+--('LDZCHJ-DAB', 2, 2.30, 'LDZ-CHJ', 'LDZ-DAB'),
+--('LDZDAB-WIDZ', 4, 3.20, 'LDZ-DAB', 'LDZ-WIDZ'),
+--('LDZFAB-WIDZ', 5, 3.50, 'LDZ-FAB', 'LDZ-WIDZ'),
+--('LDZOLWIAD-CHJ', 2, 2.40, 'LDZ-OL-WIAD', 'LDZ-CHJ'),
+--('LDZOLZAH-OLWIAD', 2, 2.20, 'LDZ-OL-ZAH', 'LDZ-OL-WIAD'),
+--('LDZOLZAH-OLZAH', 2, 2.20, 'LDZ-OL-WSH', 'LDZ-OL-ZAH'),
+--('LDZOLWSH-WIDZ', 4, 3.20, 'LDZ-WIDZ', 'LDZ-OL-WSH'),
+--('LDZOLWSH-AND', 3, 2.80, 'LDZ-AND', 'LDZ-OL-WSH'),
+--('LDZWIDZ-STK', 2, 2.20, 'LDZ-STK', 'LDZ-WIDZ'),
+--('LDZMAR-STK', 3, 2.40, 'LDZ-MAR', 'LDZ-STK'),
+--('LDZART-MAR', 3, 2.50, 'LDZ-ART', 'LDZ-MAR'),
+--('LDZART-ZGI', 3, 2.50, 'ZGI', 'LDZ-ART'),
+--('LDZFAB-NIC', 4, 3.30, 'LDZ-FAB', 'LDZ-NIC'),
+--('LDZNIC-WIDZ', 2, 2.30, 'LDZ-NIC', 'LDZ-WIDZ')

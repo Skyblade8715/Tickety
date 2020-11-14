@@ -1,0 +1,3 @@
+include ':tickety'
+include ':app'
+rootProject.name = "Tickety"

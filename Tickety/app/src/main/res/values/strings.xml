@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tickety</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="connections_ui">Połączenia</string>
+    <string name="account_ui">Moje konto</string>
+    <string name="credits_ui">Informacje</string>
+    <string name="credits">
+        Icon made by Pixel perfect from www.flaticon.com
+        http://www.flaticon.com/free-icon/sushi_187463#term=sushi&amp;page=1&amp;position=68
+    </string>
+</resources>
