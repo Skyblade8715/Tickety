@@ -1,6 +1,10 @@
 const express = require("express"),
       app     = express(),
-      stationsR = require("./routes/stationsR");
+      stationsR = require("./routes/stationsR"),
+      stopsR = require("./routes/stopsR"),
+      routesR = require("./routes/routesR"),
+      ticketTypesR = require("./routes/ticketTypesR"),
+      discountsR = require("./routes/discountsR");
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*"); 
@@ -12,6 +16,13 @@ app.use(express.json());
 
 app.use('/stations', stationsR);
 
+app.use('/stops', stopsR);
+
+app.use('/routes/', routesR);
+
+app.use('/discounts/', discountsR);
+
+app.use('/ticketTypes/', ticketTypesR);
 
 app.get("/", (req, res) => {
     console.log("elo");

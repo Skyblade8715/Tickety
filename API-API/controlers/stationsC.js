@@ -18,8 +18,6 @@ exports.getNames = (req, res) => {
     Promise.all(tab).then(holder => {
         var errors, names;
         errors = "";
-        console.log(typeof(holder[0]));
-        console.log(typeof(holder[1]));
         if(typeof(holder[0]) != "string"){
             var namesLKA = holder[0].data.map(i => i.Name);
         } else {
@@ -39,7 +37,6 @@ exports.getNames = (req, res) => {
         });
 
     }).catch(
-        console.log("ERROR")
     )
 
 

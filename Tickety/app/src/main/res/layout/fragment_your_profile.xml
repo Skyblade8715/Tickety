@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profileName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Imię"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profileSurname"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Nazwisko"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/profileName"
+        app:layout_constraintStart_toStartOf="@+id/profileName"
+        app:layout_constraintTop_toBottomOf="@+id/profileName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profileDiscountLKA"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hint="Zniżka LKA: % zniżki"
+        app:layout_constraintEnd_toEndOf="@+id/profileSurname"
+        app:layout_constraintStart_toStartOf="@+id/profileSurname"
+        app:layout_constraintTop_toBottomOf="@+id/profileSurname">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/profileDiscountLKAEdit"
+            style="@style/Platform.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="none"
+            android:maxLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profileDiscountREGIO"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hint="Zniżka REGIO: % zniżki"
+        app:layout_constraintEnd_toEndOf="@+id/profileDiscountLKA"
+        app:layout_constraintStart_toStartOf="@+id/profileDiscountLKA"
+        app:layout_constraintTop_toBottomOf="@+id/profileDiscountLKA">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/profileDiscountREGIOEdit"
+            style="@style/Platform.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="none"
+            android:maxLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profileDiscountMPK"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hint="Zniżka MPK: % zniżki"
+        app:layout_constraintEnd_toEndOf="@+id/profileDiscountLKA"
+        app:layout_constraintStart_toStartOf="@+id/profileDiscountLKA"
+        app:layout_constraintTop_toBottomOf="@+id/profileDiscountREGIO">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/profileDiscountMPKEdit"
+            style="@style/Platform.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="none"
+            android:maxLines="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profileDiscountSave"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Zapisz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileDiscountMPK"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

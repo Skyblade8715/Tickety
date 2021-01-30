@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/connItemCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardBackgroundColor="#8FFFFFFF"
+    app:cardCornerRadius="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4F5A5858">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mpkConn_line"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="16:40 --> 17:30"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/connItemSth"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/lka_icon"
+            android:drawablePadding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/mpkConn_addInfo"
+            app:layout_constraintEnd_toEndOf="@+id/mpkConn_line"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mpkConn_line"
+            app:layout_constraintTop_toBottomOf="@+id/mpkConn_line"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="LKA Bezpośredni, 00:50" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/connItemBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/connItemSth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/connItemSth"
+            app:layout_constraintTop_toTopOf="@+id/mpkConn_line"
+            tools:text="Kup za\n5,40 zł!" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mpkConn_addInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="102dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/connItemTrainID"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="120dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="L185020" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/connItemWifi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/wifi_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/connItemTrainID" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/connItemMachine"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/machine_icon"
+                app:layout_constraintEnd_toEndOf="@+id/connItemDisability"
+                app:layout_constraintTop_toBottomOf="@+id/connItemDisability" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/connItemDisability"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/disability_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/connItemWifi" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/connItemAC"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/ac_icon"
+                app:layout_constraintStart_toStartOf="@+id/connItemWifi"
+                app:layout_constraintTop_toBottomOf="@+id/connItemWifi" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/connItemSubStations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/connItemMachine" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

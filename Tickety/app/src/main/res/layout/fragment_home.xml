@@ -5,83 +5,273 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.connections.HomeFragment"
+    android:id="@+id/constraint_fragment_home"
+    >
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/connectionsStartingStationText"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:hint="Stacja początkowa"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/home_divider_train"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancel_button2">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registrationDiscountREGIO"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:maxLines="1" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Stacja początkowa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/connectionsDestinationStationText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:hint="Stacja docelowa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/connectionsStartingStationText">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/startStationEdit"
+                style="@style/Platform.MaterialComponents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/connectionsDestinationStationText"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:maxLines="1" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Stacja docelowa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrationDiscountREGIO">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/endStationEdit"
+                style="@style/Platform.MaterialComponents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <include
+            android:id="@+id/progressBar"
+            layout="@layout/progress_bar"
+            android:visibility="gone" />
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
-        android:text="Znajdź"
-        app:layout_constraintEnd_toEndOf="@+id/connectionsDestinationStationText"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:text="Znajdź"
+            app:layout_constraintEnd_toEndOf="@+id/connectionsDestinationStationText"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/optionsButton"
+            app:layout_constraintTop_toBottomOf="@+id/connectionsDestinationStationText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_buyMPK"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:text="Kup bilet!"
+            app:icon="@drawable/ticket_icon"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="@+id/connectionsDestinationStationText"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/optionsButton"
+            app:layout_constraintTop_toBottomOf="@+id/optionsButton"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/optionsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/searchButton"
+            android:text="Opcje"
+            app:layout_constraintStart_toStartOf="@+id/connectionsDestinationStationText"
+            app:layout_constraintTop_toTopOf="@+id/searchButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clearButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@id/searchButton"
+            android:layout_toLeftOf="@id/searchButton"
+            android:text="Wyczyść"
+            app:layout_constraintBottom_toTopOf="@+id/registrationDiscountREGIO"
+            app:layout_constraintEnd_toEndOf="@+id/registrationDiscountREGIO"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/clearButton2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:lineSpacingExtra="36sp"
+            android:text="Ostatnie połączenia"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:rippleColor="@color/purple_500" />
+
+        <ImageButton
+            android:id="@+id/possiblyIncorrectData"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_exclamation_mark"
+            android:theme="@style/Theme.Tickety"
+            android:tint="@android:color/transparent"
+            android:tooltipText=""
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/registrationDiscountREGIO"
+            app:layout_constraintStart_toStartOf="@+id/registrationDiscountREGIO" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="140dp"
+            android:background="#9A9696"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="50dp"
+            android:background="#9A9696"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/swap_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Zamień"
+            android:textColor="@color/purple_200"
+            app:icon="@drawable/exchange_icon"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/purple_200"
+            app:layout_constraintBottom_toTopOf="@+id/connectionsDestinationStationText"
+            app:layout_constraintEnd_toEndOf="@+id/registrationDiscountREGIO"
+            app:layout_constraintStart_toStartOf="@+id/registrationDiscountREGIO"
+            app:layout_constraintTop_toBottomOf="@+id/registrationDiscountREGIO"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favorite_stations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/home_divider_train"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/purple_200"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/divider9"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/cancel_button"
-        app:layout_constraintTop_toBottomOf="@+id/connectionsDestinationStationText" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/cancel_button"
+        android:id="@+id/home_trainPart"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/next_button"
-        android:layout_toLeftOf="@id/next_button"
-        android:text="Opcje"
-        app:layout_constraintStart_toStartOf="@+id/connectionsDestinationStationText"
-        app:layout_constraintTop_toTopOf="@+id/next_button" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="Kolej"
+        app:icon="@drawable/train_icon"
+        app:iconSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_divider_train" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/cancel_button2"
+        android:id="@+id/home_mpkPart"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_toStartOf="@id/next_button"
-        android:layout_toLeftOf="@id/next_button"
-        android:text="Wyczyść"
-        app:layout_constraintEnd_toEndOf="@+id/connectionsStartingStationText"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="mpk"
+        app:icon="@drawable/bus_icon"
+        app:iconSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/divider9"
+        app:layout_constraintTop_toBottomOf="@+id/home_divider_train"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <View
+        android:id="@+id/home_divider_mpk"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="60dp"
+        android:background="#503C3C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/divider9" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_divider_train" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

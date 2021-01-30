@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="Zapisz swoje dane, w celu usprawnienia zakupu biletów!\nPodane przez ciebie dane zostanę wyłącznie na twoim urządzeniu i znikną w momencie usunięcia aplikacji lub danych.\nWypełnienie formy pozwoli nam wprowadzić wszystkie potrzebne dane do zakupu biletów za ciebie, dzięki czemu kupienie biletu będzie szybsze i wygodniejsze!"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registrationName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="Imię"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/materialTextView"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="@+id/materialTextView"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registrationSurname"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Nazwisko"
+        android:singleLine="true"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/materialTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/materialTextView"
+        app:layout_constraintTop_toBottomOf="@+id/registrationName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registrationDiscountLKA"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hint="Zniżka LKA: % zniżki"
+        app:layout_constraintEnd_toEndOf="@+id/registrationSurname"
+        app:layout_constraintStart_toStartOf="@+id/registrationSurname"
+        app:layout_constraintTop_toBottomOf="@+id/registrationSurname">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/registrationDiscountLKAEdit"
+            style="@style/Platform.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="none"
+            android:maxLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registrationDiscountREGIO"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hint="Zniżka REGIO: % zniżki"
+        app:layout_constraintEnd_toEndOf="@+id/registrationDiscountLKA"
+        app:layout_constraintStart_toStartOf="@+id/registrationDiscountLKA"
+        app:layout_constraintTop_toBottomOf="@+id/registrationDiscountLKA">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/registrationDiscountREGIOEdit"
+            style="@style/Platform.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="none"
+            android:maxLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registrationDiscountMPK"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:hint="Zniżka MPK: % zniżki"
+        app:layout_constraintEnd_toEndOf="@+id/registrationDiscountLKA"
+        app:layout_constraintStart_toStartOf="@+id/registrationDiscountLKA"
+        app:layout_constraintTop_toBottomOf="@+id/registrationDiscountREGIO">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/registrationDiscountMPKEdit"
+            style="@style/Platform.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:inputType="none"
+            android:maxLines="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/discountSave"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Zapisz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationDiscountMPK"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

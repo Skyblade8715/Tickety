@@ -4,13 +4,16 @@ GO
 Select * from LKA.Stations order BY StationID
 Select * from LKA.Route
 
-
 --INSERT INTO LKA.Route(RouteID, seq_no, StationID, Platform, Track, ArrivalTime, WaitTime)
 --Values 
 --('LD-SI1', 0, 'CHECH', 'I', 1, 0, 0),
 --('LD-SI1', 1, 'PAB', 'I', 1, 4, 1),
 --('LD-SI1', 2, 'LDZ-LUB', 'I', 1, 6, 0),
 --('LD-SI1', 3, 'LDZ-KAL', 'III', 9, 9, 1),
+--('SI-LD1', 0, 'LDZ-KAL', 'II', 3, 0, 0),
+--('SI-LD1', 1, 'LDZ-LUB', 'I', 2, 9, 1),
+--('SI-LD1', 2, 'PAB', 'I', 2, 6, 0),
+--	('SI-LD1', 3, 'CHECH', 'I', 2, 4, 1),
 --('LD-SK-WA1', 0, 'LDZ-FAB', 'II', 1, 0, 0),
 --('LD-SK-WA1', 1, 'LDZ-NIC', 'I', 1, 3, 0),
 --('LD-SK-WA1', 2, 'LDZ-WIDZ', 'II', 1, 3, 1),

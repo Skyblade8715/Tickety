@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".ui.buyTicket.BuyTicketTrain"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buy_buy"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="24dp"
+            android:text="Zakup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_trainID"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="dwqdqwdqwdasd"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_trainID2"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="Stacja początkowa"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_trainID" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_trainID4"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="Stacja końcowa"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_startStation" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bought_bike"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_barcode"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bought_dog"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bought_bike"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bought_bag"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bought_dog"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_discount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:text="Zniżka"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_startStation"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="ASDas"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_trainID2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_endStation"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="ASDas"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_trainID4" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_time"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="time"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_endStation" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/buy_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/buy_time"
+            app:layout_constraintStart_toStartOf="@+id/buy_time"
+            app:layout_constraintTop_toBottomOf="@+id/buy_time" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/buy_buy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_options"
+            app:layout_constraintVertical_bias="1.0"
+            tools:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/buy_substations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buy_options"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_discount"
+            tools:visibility="visible">
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/buy_minus_bike"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFBB86FC"
+                android:gravity="center"
+                android:src="@drawable/minus_one_icon"
+                android:tint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/buy_time2"
+                app:layout_constraintEnd_toStartOf="@+id/buy_time2"
+                app:layout_constraintTop_toTopOf="@+id/buy_time2" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/buy_minus_dog"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFBB86FC"
+                android:gravity="center"
+                android:src="@drawable/minus_one_icon"
+                android:tint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/buy_time3"
+                app:layout_constraintEnd_toStartOf="@+id/buy_time2"
+                app:layout_constraintStart_toStartOf="@+id/buy_minus_bike"
+                app:layout_constraintTop_toTopOf="@+id/buy_time3" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/buy_minus_bag"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFBB86FC"
+                android:gravity="center"
+                android:src="@drawable/minus_one_icon"
+                android:tint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/buy_time4"
+                app:layout_constraintEnd_toStartOf="@+id/buy_time2"
+                app:layout_constraintStart_toStartOf="@+id/buy_minus_dog"
+                app:layout_constraintTop_toTopOf="@+id/buy_time4" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/buy_add_bag"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#FFBB86FC"
+                android:gravity="center"
+                android:src="@drawable/add_one_icon"
+                android:tint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/buy_time4"
+                app:layout_constraintEnd_toEndOf="@+id/buy_add_dog"
+                app:layout_constraintStart_toEndOf="@+id/buy_time4"
+                app:layout_constraintTop_toTopOf="@+id/buy_time4" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/buy_add_bike"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#FFBB86FC"
+                android:gravity="center"
+                android:src="@drawable/add_one_icon"
+                android:tint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/buy_time2"
+                app:layout_constraintStart_toEndOf="@+id/buy_time2"
+                app:layout_constraintTop_toTopOf="@+id/buy_time2" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/buy_add_dog"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#FFBB86FC"
+                android:gravity="center"
+                android:src="@drawable/add_one_icon"
+                android:tint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/buy_time3"
+                app:layout_constraintEnd_toEndOf="@+id/buy_add_bike"
+                app:layout_constraintStart_toEndOf="@+id/buy_time3"
+                app:layout_constraintTop_toTopOf="@+id/buy_time3" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/buy_time2"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="Przewóz rowerów(+7zł)"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/buy_options"
+                app:layout_constraintStart_toStartOf="@id/buy_options"
+                app:layout_constraintTop_toTopOf="@id/buy_options" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/buy_time3"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="Przewóz psów(+4zł)"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/buy_options"
+                app:layout_constraintStart_toStartOf="@id/buy_options"
+                app:layout_constraintTop_toBottomOf="@+id/buy_time2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/buy_time4"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="Przewóz bagażu(+7zł)"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/buy_options"
+                app:layout_constraintStart_toStartOf="@id/buy_options"
+                app:layout_constraintTop_toBottomOf="@+id/buy_time3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/buy_barcode"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_discount"
+            tools:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

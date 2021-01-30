@@ -9,9 +9,10 @@
 
     <string name="connections_ui">Połączenia</string>
     <string name="account_ui">Moje konto</string>
-    <string name="credits_ui">Informacje</string>
+    <string name="credits_ui">Bilety</string>
     <string name="credits">
         Icon made by Pixel perfect from www.flaticon.com
         http://www.flaticon.com/free-icon/sushi_187463#term=sushi&amp;page=1&amp;position=68
+        http://www.freepik.com
     </string>
 </resources>

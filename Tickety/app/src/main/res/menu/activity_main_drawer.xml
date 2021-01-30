@@ -9,12 +9,12 @@
             android:icon="@drawable/connections_icon"
             android:title="@string/connections_ui" />
         <item
+            android:id="@+id/nav_credits"
+            android:icon="@drawable/ticket_icon"
+            android:title="@string/credits_ui" />
+        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/profile_icon"
             android:title="@string/account_ui" />
-        <item
-            android:id="@+id/nav_credits"
-            android:icon="@drawable/information_icon"
-            android:title="@string/credits_ui" />
     </group>
 </menu>

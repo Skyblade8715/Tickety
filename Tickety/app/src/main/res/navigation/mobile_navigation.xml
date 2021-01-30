@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_connections"
-        android:name="com.sky.tickety.ui.home.HomeFragment"
+        android:name="com.sky.tickety.ui.connections.HomeFragment"
         android:label="@string/connections_ui"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.sky.tickety.ui.gallery.GalleryFragment"
+        android:name="com.sky.tickety.ui.profile.YourProfile"
         android:label="@string/account_ui"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_your_profile" />
 
     <fragment
         android:id="@+id/nav_credits"
-        android:name="com.sky.tickety.ui.slideshow.SlideshowFragment"
+        android:name="com.sky.tickety.ui.tickets.Tickets"
         android:label="@string/credits_ui"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_tickets_wallet" />
 </navigation>
